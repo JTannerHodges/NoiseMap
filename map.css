@@ -1,0 +1,54 @@
+body {
+	display: grid;
+	background-color: #F5F5DC;
+	font-family: arial;
+	grid-template-columns: calc(100vw - 410px) 190px;
+	grid-template-rows: 100px calc(90vh - 110px);
+	margin: 0 10px 10px 10px;
+}
+
+h1 {
+	grid-area: 1 / 1 / 1 / 2;
+	font-size: 24px;
+	line-height: 55px;
+	margin-left: 30px;
+}
+
+#map {
+	grid-area: 2 / 1 / 2 / 1;
+	height: 100%;
+	width: 95%;
+	margin-left: 30px;
+	border: 2px solid black;
+}
+
+#enter {
+	font-size: 10px;
+}
+
+#form {
+	grid-area: 2 / 2 / 2 / 2;
+	font-size: 14px;
+	margin-left: 10px;
+	margin-right: 20px;
+
+}
+
+#description {
+height: 100px;
+}
+
+#name, #lat, #lon, #description {
+	width: calc(100% - 5px);
+}
+
+#notice {
+	color: #8b0000;
+	width: calc(100% - 5px);
+	font-size: 10px;
+}
+
+#popup-table, td {
+    background: white;
+    border: 1px solid #555555;
+}

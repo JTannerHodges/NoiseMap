@@ -1,0 +1,48 @@
+<!--Copyright (C) 2022, Tanner Hodges, University of North Georgia-->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/css/ol.css" type="text/css">
+		<link rel="stylesheet" href="map.css" type="text/css">
+		<script src="https://cdn.jsdelivr.net/gh/openlayers/openlayers.github.io@master/en/v6.12.0/build/ol.js"></script>
+		<title>NoiseMap</title>
+	</head>
+	<body>
+		<h1>NoiseMap - v1.0</h1>
+		<div id="map"></div>
+		<div id="popup"></div>
+		<div id="form">
+			<h3 id="input_header">Data Input</h3>
+			<form action="/" method="POST" enctype="multipart/form-data">
+				Username: <input name="name">
+				<p id="enter">Enter X/Y coordinates, or select manually by clicking on the desired location in the map window.</p>
+				Latitude: <input id="lat" name="lat"><br>
+				Longitude: <input id="lon" name="lon"><br>
+				Noise type:
+					<label for="noise"></label>
+					<select name="noise">
+						<option value="select">Select a noise type</option>
+						<option value="Road Traffic">Road Traffic</option>
+						<option value="Air Traffic">Air Traffic</option>
+						<option value="Loud Vehicles">Loud Vehicles</option>
+						<option value="Industry">Industrial</option>
+						<option value="Construction">Construction</option>
+						<option value="Urban">Urban</option>
+						<option value="Music">Music</option>
+						<option value="Other">Other</option>
+					</select>
+				Description: <textarea name="desc" rows="2" cols="20">200 character limit.</textarea>
+				<br><br>
+    			Upload audio file (.wav format only!):
+    				<input type="file" name="filename" />
+    			<p id="notice">*Read before uploading!<br>
+    			Please ensure the following:<br>
+    			- Audio file is between 30-45 seconds in duration AND<br>
+    			- Wind interference is minimal. (Wind distortion will skew loudness reading.)</p>
+			    <input type="submit" value="Submit Data">
+			</form>
+		</div>
+		<script src="map.js"></script>
+	</body>
+</html>
